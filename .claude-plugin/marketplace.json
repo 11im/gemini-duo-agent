@@ -1,0 +1,17 @@
+{
+  "owner": "local",
+  "name": "gemini-duo-local",
+  "description": "Local Gemini Duo-Agent Marketplace",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "gemini-duo-agent",
+      "description": "Dual-agent system: Claude Code + Gemini CLI",
+      "version": "1.0.0",
+      "source": {
+        "type": "local",
+        "path": "."
+      }
+    }
+  ]
+}
