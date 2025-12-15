@@ -1,20 +1,8 @@
 {
   "name": "gemini-duo-agent",
   "description": "Dual-agent system: Claude Code (Supervisor) + Gemini CLI (Worker) for AI research and coding automation",
-  "version": "1.0.0",
   "author": {
     "name": "11im",
     "email": "meijh45656@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/11im/gemini-duo-agent"
-  },
-  "keywords": [
-    "gemini",
-    "dual-agent",
-    "research",
-    "automation",
-    "coding"
-  ]
-}
+  }
+  }
