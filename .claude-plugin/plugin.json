@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "author": {
     "name": "11im",
-    "email": "your-email@example.com"
+    "email": "meijh45656@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/gemini-duo-agent"
+    "url": "https://github.com/11im/gemini-duo-agent"
   },
   "keywords": [
     "gemini",
@@ -16,9 +16,5 @@
     "research",
     "automation",
     "coding"
-  ],
-  "license": "MIT",
-  "engines": {
-    "claude-code": ">=2.0.0"
-  }
+  ]
 }

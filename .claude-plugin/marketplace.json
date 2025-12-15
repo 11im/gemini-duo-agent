@@ -1,20 +1,16 @@
 {
   "owner": {
-    "name": "11im",
-    "type": "github"
+    "name": "11im"
   },
   "name": "gemini-duo-agent",
-  "description": "Dual-agent system: Claude Code + Gemini CLI",
+  "description": "Dual-agent system",
   "version": "1.0.0",
   "plugins": [
     {
       "name": "gemini-duo-agent",
-      "description": "Dual-agent system for AI research and coding automation",
-      "version": "1.0.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/11im/gemini-duo-agent.git"
-      }
+      "description": "Dual-agent system for AI research",
+      "source": "./", 
+      "version": "1.0.0"
     }
   ]
 }
