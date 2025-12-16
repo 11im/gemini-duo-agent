@@ -21,7 +21,7 @@
 **ALWAYS use this exact syntax:**
 
 ```bash
-gemini -m pro -p "DETAILED_PROMPT_HERE" -o text > output_filename
+gemini -m pro -p "DETAILED_PROMPT_HERE" -y -o text > output_filename
 ```
 
 **Critical flags:**
