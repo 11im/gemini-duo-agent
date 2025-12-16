@@ -48,7 +48,7 @@ This command generates:
    - Provides examples
 4. **Gemini drafts** the report:
    ```bash
-   gemini -m pro -p "REPORT_PROMPT" -o text > draft_report.md
+   gemini -m pro -p "REPORT_PROMPT" -y -o text > draft_report.md
    ```
 5. **Claude refines**:
    - Checks completeness
@@ -274,7 +274,7 @@ def generate_report(topic, report_type, sources, output_format):
     )
     
     # Step 4: Gemini generates draft
-    run_command(f'gemini -m pro -p "{prompt}" -o text > draft.md')
+    run_command(f'gemini -m pro -p "{prompt}" -y -o text > draft.md')
     
     # Step 5: Claude refines
     draft = read_file('draft.md')

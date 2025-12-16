@@ -92,7 +92,7 @@ Based on your stated requirements:
 ## Gemini Worker Protocol
 
 You can delegate tasks to Gemini Pro using:
-`!gemini -m pro -p "task description" > output.txt`
+`!gemini -m pro -p "task description" -y > output.txt`
 
 ### When to Delegate
 - Research (>500 tokens)
@@ -104,14 +104,14 @@ You can delegate tasks to Gemini Pro using:
 1. Analyze user request
 2. Decide: Claude or Gemini?
 3. If Gemini: Create detailed prompt
-4. Execute: `!gemini -m pro -p "..." > file`
+4. Execute: `!gemini -m pro -p "..." -y > file`
 5. Validate: Check quality
 6. Present: Format and deliver
 
 ### Examples
-Research: `!gemini -m pro -p "Survey recent papers on TTA for time series" > research.md`
-Code: `!gemini -m pro -p "Implement binary search tree in Python" > bst.py`
-Debug: `!gemini -m pro -p "Analyze this error: [error]" > analysis.txt`
+Research: `!gemini -m pro -p "Survey recent papers on TTA for time series" -y > research.md`
+Code: `!gemini -m pro -p "Implement binary search tree in Python" -y > bst.py`
+Debug: `!gemini -m pro -p "Analyze this error: [error]" -y > analysis.txt`
 ```
 
 **Validation goals:**
@@ -190,7 +190,7 @@ cd gemini-duo-agent
 
 **Tasks:**
 1. Create `CLAUDE.md` in project root
-2. Test basic delegation: `!gemini -m pro -p "..." > out.txt`
+2. Test basic delegation: `!gemini -m pro -p "..." -y > out.txt`
 3. Document 10+ use cases
 4. Measure effectiveness
 
@@ -263,12 +263,12 @@ cat > CLAUDE.md << 'EOF'
 # Gemini Worker Integration
 
 Delegate heavy tasks to Gemini Pro:
-`!gemini -m pro -p "detailed prompt" > output.txt`
+`!gemini -m pro -p "detailed prompt" -y > output.txt`
 
 Examples:
-- Research: `!gemini -m pro -p "Survey X" > survey.md`
-- Code: `!gemini -m pro -p "Implement Y" > code.py`
-- Debug: `!gemini -m pro -p "Fix Z error" > fix.txt`
+- Research: `!gemini -m pro -p "Survey X" -y > survey.md`
+- Code: `!gemini -m pro -p "Implement Y" -y > code.py`
+- Debug: `!gemini -m pro -p "Fix Z error" -y > fix.txt`
 EOF
 
 # 3. Start Claude Code
@@ -276,7 +276,7 @@ claude
 
 # 4. Test delegation
 # In Claude: "Research recent papers on transformers"
-# Claude should use: !gemini -m pro -p "..." > research.md
+# Claude should use: !gemini -m pro -p "..." -y > research.md
 ```
 
 ### Option B: Jump to Plugin (If confident)

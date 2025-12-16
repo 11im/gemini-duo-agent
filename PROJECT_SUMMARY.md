@@ -163,7 +163,7 @@ User: "Research recent papers on transformers"
 ↓
 Claude: [판단] 이건 research 작업 → Gemini 호출 결정
 ↓
-Claude: !gemini -m pro -p "..." > research.md
+Claude: !gemini -m pro -p "..." -y > research.md
 ↓
 Claude: [검증] 결과 확인 후 사용자에게 제시
 ```

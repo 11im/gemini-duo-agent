@@ -46,7 +46,7 @@ This command handles:
    - Output format
 3. **Gemini analyzes**:
    ```bash
-   gemini -m pro -p "REVIEW_PROMPT" -o json > review_report.json
+   gemini -m pro -p "REVIEW_PROMPT" -y -o json > review_report.json
    ```
 4. **Claude processes** findings:
    - Categorizes issues
@@ -297,7 +297,7 @@ def execute_review(path, aspects, severity, fix_mode):
     )
     
     # Step 3: Gemini performs review
-    run_command(f'gemini -m pro -p "{review_prompt}" -o json > review.json')
+    run_command(f'gemini -m pro -p "{review_prompt}" -y -o json > review.json')
     
     # Step 4: Claude processes results
     review_data = read_json('review.json')

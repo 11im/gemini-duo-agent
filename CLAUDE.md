@@ -104,7 +104,7 @@ Output Structure:
 """
 
 Step 3 (Execute):
-!gemini -m pro -p "$PROMPT" -o text > research_report.md
+!gemini -m pro -p "$PROMPT" -y -o text > research_report.md
 
 Step 4 (Claude): Validate
   - Check completeness
@@ -157,7 +157,7 @@ Output: Complete, executable Python file
 """
 
 Step 3 (Execute):
-!gemini -m pro -p "$SPEC" -o text > implementation.py
+!gemini -m pro -p "$SPEC" -y -o text > implementation.py
 
 Step 4 (Claude): Review & Test
   - Syntax check
@@ -221,7 +221,7 @@ OUTPUT FORMAT (JSON):
 """
 
 Step 3 (Execute):
-!gemini -m pro -p "$DEBUG_PROMPT" -o json > debug_analysis.json
+!gemini -m pro -p "$DEBUG_PROMPT" -y -o json > debug_analysis.json
 
 Step 4 (Claude): Validate solution
   - Check plausibility
@@ -274,7 +274,7 @@ QUALITY CRITERIA:
 """
 
 Step 4 (Execute):
-!gemini -m pro -p "$REPORT_PROMPT" -o text > draft_report.md
+!gemini -m pro -p "$REPORT_PROMPT" -y -o text > draft_report.md
 
 Step 5 (Claude): Refine
   - Check completeness
@@ -352,7 +352,7 @@ User: "What are recent developments in test-time adaptation?"
 
 Claude thinks: Medium complexity, research task → Delegate to Gemini
 
-Claude: !gemini -m pro -p "Survey recent papers (2023-2024) on test-time adaptation methods. Focus on: key innovations, performance improvements, limitations. Format as structured markdown with citations. Length: 2-3 pages." -o text > tta_research.md
+Claude: !gemini -m pro -p "Survey recent papers (2023-2024) on test-time adaptation methods. Focus on: key innovations, performance improvements, limitations. Format as structured markdown with citations. Length: 2-3 pages." -y -o text > tta_research.md
 
 [Gemini executes → generates research.md]
 
@@ -376,7 +376,7 @@ Requirements:
 - Type hints for all methods
 - Unit tests
 
-Output complete .py file." -o text > bst.py
+Output complete .py file." -y -o text > bst.py
 
 [Gemini executes → generates bst.py]
 
@@ -448,7 +448,7 @@ gemini auth login
 **Issue 3: Output file empty**
 ```bash
 # Check for errors
-gemini -m pro -p "test" -o text 2>error.log
+gemini -m pro -p "test" -y -o text 2>error.log
 cat error.log
 ```
 
@@ -460,7 +460,7 @@ cat > prompt.txt << 'EOF'
 EOF
 
 # Use file input
-gemini -m pro -p "$(cat prompt.txt)" -o text > output.txt
+gemini -m pro -p "$(cat prompt.txt)" -y -o text > output.txt
 ```
 
 ---
@@ -513,7 +513,7 @@ Track delegation effectiveness:
 **Claude will automatically:**
 1. Recognize it's a research task
 2. Create an optimized Gemini prompt
-3. Execute: `gemini -m pro -p "..." > summary.md`
+3. Execute: `gemini -m pro -p "..." -y > summary.md`
 4. Validate and present the results
 
 **Good luck! 🚀**

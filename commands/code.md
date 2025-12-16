@@ -39,7 +39,7 @@ This command handles:
    - Test requirements
 3. **Gemini implements** the code:
    ```bash
-   gemini -m pro -p "DETAILED_SPEC" --approval-mode auto_edit -o text > OUTPUT_FILE
+   gemini -m pro -p "DETAILED_SPEC" -y --approval-mode auto_edit -o text > OUTPUT_FILE
    ```
 4. **Claude reviews**:
    - Syntax check
@@ -129,7 +129,7 @@ Output only the complete, executable code.
 """
     
     # Step 4: Execute Gemini CLI
-    run_command(f'gemini -m pro -p "{prompt}" -o text > {output}')
+    run_command(f'gemini -m pro -p "{prompt}" -y -o text > {output}')
     
     # Step 5: Claude validates
     code = read_file(output)

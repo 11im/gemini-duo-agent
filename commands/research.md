@@ -32,7 +32,7 @@ This command delegates research tasks to Gemini CLI (Pro model) for:
    - Token budget guidelines
 3. **Executes Gemini CLI**:
    ```bash
-   gemini -m pro -p "OPTIMIZED_PROMPT" -o json > OUTPUT_FILE
+   gemini -m pro -p "OPTIMIZED_PROMPT" -y -o json > OUTPUT_FILE
    ```
 4. **Validates results**:
    - Checks completeness
@@ -84,7 +84,7 @@ OUTPUT="${3:-research_$(date +%s).md}"
 PROMPT=$(claude_generate_research_prompt "$TOPIC" "$DEPTH")
 
 # Execute Gemini CLI
-gemini -m pro -p "$PROMPT" -o text > "$OUTPUT"
+gemini -m pro -p "$PROMPT" -y -o text > "$OUTPUT"
 
 # Validate and format
 claude_validate_research "$OUTPUT"

@@ -35,7 +35,7 @@ This command handles:
    - Expected vs actual behavior
 3. **Gemini analyzes**:
    ```bash
-   gemini -m pro -p "DEBUG_PROMPT" -o json > analysis.json
+   gemini -m pro -p "DEBUG_PROMPT" -y -o json > analysis.json
    ```
 4. **Claude validates** the analysis:
    - Checks plausibility
@@ -216,7 +216,7 @@ CONTEXT=$(claude_gather_debug_context "$@")
 PROMPT=$(claude_create_debug_prompt "$CONTEXT")
 
 # Execute Gemini with extended reasoning
-gemini -m pro -p "$PROMPT" -o json > debug_analysis.json
+gemini -m pro -p "$PROMPT" -y -o json > debug_analysis.json
 
 # Claude validates and optionally applies
 claude_validate_and_apply debug_analysis.json "$@"
